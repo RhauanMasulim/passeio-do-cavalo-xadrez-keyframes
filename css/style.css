@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tabuleiro{
+    border: 2px solid black;
+    width: 804px;
+    height: 804px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    display: flex;
+}
+
+.coluna{
+    width: 100px;
+    height: 800px; 
+    position: relative;
+}
+
+.linha{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linha2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(102, 98, 98);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mov-cavalo{
+    width: 50px;
+    height: 50px;
+    position:relative;
+    animation: mov-cavalo 5s infinite alternate-reverse;
+    z-index: 999;
+}
+
+@keyframes mov-cavalo{
+    0%{top: 0px; left: 0px;}
+    11%{top:100px; left: 0px;}
+    22%{top: 100px; left: 200px}
+    33%{top:300px; left: 200px;}
+    44%{top:300px; left: 200px;}
+    55%{top:300px; left: 300px;}
+    66%{top:500px; left: 300px;}
+    77%{top:500px; left:400px;}
+    88%{top:700px; left:400px;}
+    100%{top:700px; left:500px;}
+}
